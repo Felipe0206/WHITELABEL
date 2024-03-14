@@ -1,0 +1,30 @@
+"use client"
+import React from 'react';
+import styles from './navbar.module.css'; // Importa los estilos CSS
+import Header from '../../../../component/Header/Header';
+import HistorialPagos from '../../../../component/HistorialPagos/HistorialPagos';
+import TokensComprados from '../../../../component/TokensComprados/TokensComprados';
+
+
+
+const Retiros: React.FC = () => {
+  
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.firstRow}>
+      <Header/>
+      </div>
+      <div className={styles.secondRow}>
+        <div className={styles.column}>
+          <HistorialPagos/>
+        </div>
+        <div className={styles.column}>
+        <TokensComprados/>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Retiros;

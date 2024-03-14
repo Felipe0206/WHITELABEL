@@ -1,0 +1,118 @@
+.outerContainer {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100vh; /* Puedes cambiar auto por hidden, scroll, o cualquier otro valor según tus necesidades */
+  }
+.container{
+  
+    display: flex;
+    flex-direction: column;
+    background-color:#333;
+    border-radius: 1.5em;
+    margin-bottom: 1em;
+    overflow-x: hidden;
+}
+
+.content,.tokenInfo,.propertyAddress,.saleInfo,.tokenSaleOptions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content{
+    background-color: aqua;
+    font-size: 1.2vw;
+    padding: 1.2em 0 1.2em 1.2em;
+    border-radius: 2em;
+}
+.propertyInfo{
+    margin: 0 1em;
+}
+
+.propertyName{
+
+    font-size: 1.2vw;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+
+.addressText,.tokenPrice{
+    font-size: 1vw;
+    white-space: nowrap;
+}
+
+.propertyImage{
+    width: 1em;
+    height: 1em;
+}
+
+.imageWithBorderRadius{
+    border-radius: 1em;
+    
+}
+
+.tokenDetails{
+    width:8em;
+    padding: 0.5em;
+    flex-direction: column;
+    border-left: 1px solid black; 
+    border-right: 1px solid black; 
+    margin-left: -1px;
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: center;
+}
+.tokenValue{
+    font-size: 2vw;
+  }
+
+  .buyButton{
+    background-color: #7FFF00;
+    padding: 1em;
+    font-size: 0.8vw;
+    white-space: nowrap;
+     text-align: center;
+     border-radius: 1em;
+
+     
+  }
+
+  .buyTokensButton{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:30%;
+    height: 100%;
+    
+  }
+
+
+  .tokensBoughtText{
+    font-size: 1vw;
+    white-space: nowrap;
+    color: white;
+    font-weight: bold;
+  }
+
+  .saleInfo{
+    width: 100%;
+    height: 5em;
+    padding: 1em;
+  }
+
+  .tokenOption,.sellTokensButton{
+    font-size: 1vw;
+    white-space: nowrap;
+    background-color: white;
+    margin:0 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    text-align: center;
+    
+  }
+
+
+
+

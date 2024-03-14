@@ -1,0 +1,98 @@
+/* Estilos para la barra de navegación */
+.navbar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 5vw; /* Ancho fijo para la barra de navegación */
+    height: 100vh; /* Altura igual al 100% del viewport */
+    background-color: #333;
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+  }
+  
+  /* Estilos para la lista de navegación */
+  .navList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1; /* El 100% del espacio disponible para la lista */
+    display: flex; /* Utiliza flexbox para alinear verticalmente los íconos */
+    flex-direction: column; /* Alinear los íconos verticalmente */
+    justify-content: space-around; /* Distribuir uniformemente los íconos */
+  }
+  
+  /* Estilos para cada ícono de navegación */
+  .navItem {
+    margin-bottom: 10px; /* Espacio entre cada ícono */
+    flex: 1; /* Cada ícono ocupa el 25% del espacio vertical disponible */
+    position: relative; /* Posición relativa para el ícono */
+  }
+  
+  /* Estilos para la línea que indica el ícono seleccionado */
+  .navItem::after {
+    content: ''; /* Agrega contenido al seudoelemento */
+    position: absolute; /* Posición absoluta para la línea */
+    top: 0; /* Ajusta la posición de la línea */
+    left: -9px; /* Ajusta la posición de la línea al borde izquierdo */
+    width: 5px; /* Grosor de la línea */
+    height: 20%; /* Altura total de la línea */
+    background-color: #d4780f; /* Color de la línea */
+    border-top-right-radius: 5px;
+    display: none; /* Oculta la línea por defecto */
+  }
+  
+  /* Muestra la línea cuando el ícono está seleccionado */
+  .navItem.selected::after {
+    display: block; /* Muestra la línea cuando el ícono está seleccionado */
+  }
+  
+  /* Estilos para el contenedor de íconos */
+  .iconWrapper {
+    width: 30px; /* Reducir el ancho de los iconos */
+    height: 30px; /* Reducir la altura de los iconos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilos para el ícono seleccionado */
+  .navItem.selected .iconWrapper img {
+    filter: invert(54%) sepia(95%) saturate(748%) hue-rotate(359deg) brightness(92%) contrast(92%);
+  }
+  
+  /* Estilos para el texto del enlace */
+  .linkText {
+    display: none; /* Oculta el texto por defecto */
+    position: absolute; /* Posición absoluta para la burbuja */
+    left: 10px;
+    top: -30px; /* Posiciona la burbuja arriba del ícono */
+    background-color: #333; /* Color de fondo de la burbuja */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  /* Muestra el texto al hacer hover sobre cualquier ícono */
+  .navItem:hover .linkText {
+    display: block; /* Muestra el texto al hacer hover */
+  }
+  
+  /* Media Query para hacer la barra de navegación más pequeña en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar {
+      width: 10vw; /* Reducir el ancho de la barra de navegación en pantallas pequeñas */
+      padding: 10px; /* Reducir el relleno */
+    }
+  
+    .iconWrapper {
+      width: 20px; /* Reducir el ancho de los íconos en pantallas pequeñas */
+      height: 20px; /* Reducir la altura de los íconos en pantallas pequeñas */
+    }
+  }
+  
+  
